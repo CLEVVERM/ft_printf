@@ -6,7 +6,7 @@
 /*   By: msotnych <msotnych@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/10/27 15:18:01 by msotnych      #+#    #+#                 */
-/*   Updated: 2026/10/27 17:59:01 by msotnych      ########   odam.nl         */
+/*   Updated: 2026/10/27 19:05:34 by msotnych      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,19 @@ int ft_printf(const char *format , ...)
 	int c;
 
 	c = 0;
+	res = 0;
 	va_start(list, format);
 	while (format[c] != '\0')
 	{
-		
+		if(format[c] == '%')
+		{
+			format[c + 1] = 
+		}
+		else
+		{
+			write(1, &c, 1);
+			res++;
+		}
 	}
 
 
@@ -33,4 +42,4 @@ int ft_printf(const char *format , ...)
 	
 }
 
-
+char manager(char letter, )

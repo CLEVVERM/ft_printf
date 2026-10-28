@@ -6,7 +6,7 @@
 /*   By: msotnych <msotnych@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/10/27 15:18:01 by msotnych      #+#    #+#                 */
-/*   Updated: 2026/10/27 19:05:34 by msotnych      ########   odam.nl         */
+/*   Updated: 2026/10/28 14:40:45 by msotnych      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int ft_printf(const char *format , ...)
 	va_list list; 
 	int res;
 	int c;
-
+	char letter;
+	
 	c = 0;
 	res = 0;
 	va_start(list, format);
@@ -25,21 +26,34 @@ int ft_printf(const char *format , ...)
 	{
 		if(format[c] == '%')
 		{
-			format[c + 1] = 
+			c++;
+			letter = format[c + 1];
+			c += 2;
+			res = res + 
+			
 		}
 		else
 		{
-			write(1, &c, 1);
+			write(1, &format[c], 1);
 			res++;
+			c++;
 		}
 	}
 
 
 
-	va_end(va_list list);
+	va_end(list);
 	if (!format)
 		return (NULL);
 	
 }
 
-char manager(char letter, )
+ int	manager(char letter, va_list *list)
+ {
+	if (letter == '%')
+	{
+		write(1, '%', 1);
+		return (1);
+	}
+	return (0);
+ }

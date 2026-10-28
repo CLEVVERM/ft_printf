@@ -6,7 +6,7 @@
 #    By: msotnych <msotnych@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2026/10/23 17:33:59 by msotnych      #+#    #+#                  #
-#    Updated: 2026/10/28 16:17:24 by msotnych      ########   odam.nl          #
+#    Updated: 2026/10/28 17:56:07 by msotnych      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ AR = ar rcs
 RM = rm -f
 
 
-SRC = ft_printf.c \
+SRC = ft_printf.c ft_printf_manager.c ft_printf_utils.c \
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,23 +6,22 @@
 #    By: msotnych <msotnych@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2026/10/23 17:33:59 by msotnych      #+#    #+#                  #
-#    Updated: 2026/10/27 15:31:13 by msotnych      ########   odam.nl          #
+#    Updated: 2026/10/28 15:45:22 by msotnych      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprint.a 
 CC = cc
 CFLAG = -Wall -Wextra -Werror
+AR = ar rcs
+RM = rm -f
 
 
-
-SRC = 
+SRC = ft_printf.c \
 
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
-AR = ar rcs
-RM: rm -f
 %.o: %.c
 	$(CC) $(CFLAG) -c $< -o $@  
 	

@@ -6,11 +6,11 @@
 #    By: msotnych <msotnych@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2026/10/23 17:33:59 by msotnych      #+#    #+#                  #
-#    Updated: 2026/10/28 15:45:22 by msotnych      ########   odam.nl          #
+#    Updated: 2026/10/28 16:17:24 by msotnych      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprint.a 
+NAME = libftprintf.a 
 CC = cc
 CFLAG = -Wall -Wextra -Werror
 AR = ar rcs

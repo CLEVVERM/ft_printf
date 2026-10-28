@@ -6,19 +6,18 @@
 /*   By: msotnych <msotnych@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/10/27 15:18:01 by msotnych      #+#    #+#                 */
-/*   Updated: 2026/10/28 15:43:08 by msotnych      ########   odam.nl         */
+/*   Updated: 2026/10/28 16:35:08 by msotnych      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_printf(const char *format , ...)
+int	ft_printf(const char *format , ...)
 {	
 	va_list list; 
 	int res;
 	int c;
-	char letter;
-	
+
 	c = 0;
 	res = 0;
 	if (!format)
@@ -30,8 +29,7 @@ int ft_printf(const char *format , ...)
 		{
 			if (format[c + 1] == '\0')
 				break;
-			letter = format[c + 1];
-			res = res + manager(letter, list);
+			res = res + manager(format[c + 1], &list);
 			c = c + 2;
 		}
 		else
@@ -45,18 +43,20 @@ int ft_printf(const char *format , ...)
 	return (res);
 }
 
+
 int	manager(char letter, va_list *list)
 {
+	(void)list;
 	if (letter == '%')
 	{
-		write(1, '%', 1);
+		write(1, &"%", 1);
 		return (1);
 	}
 	return (0);
 }
 
-
-int main(void)
-{
-	
-}
+// int main(void)
+// {
+// 	printf("qwer%%");
+// 	ft_printf("%%\n");
+// }

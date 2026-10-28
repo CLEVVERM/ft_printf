@@ -6,7 +6,7 @@
 /*   By: msotnych <msotnych@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/10/27 15:18:01 by msotnych      #+#    #+#                 */
-/*   Updated: 2026/10/28 18:05:31 by msotnych      ########   odam.nl         */
+/*   Updated: 2026/10/28 18:07:44 by msotnych      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	ft_printf(const char *format, ...)
 	return (res);
 }
 
-int main(void)
-{
-	printf("%c\n", 'w');
-	ft_printf("%c\n", 'f');
-}
+// int main(void)
+// {
+// 	printf("%c\n", 'w');
+// 	ft_printf("%c\n", 'f');
+// }

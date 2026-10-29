@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_printf_utils.c                                  :+:    :+:            */
+/*   ft_printf_char.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: msotnych <msotnych@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/10/28 17:45:30 by msotnych      #+#    #+#                 */
-/*   Updated: 2026/10/28 18:30:49 by msotnych      ########   odam.nl         */
+/*   Created: 2026/10/29 18:28:56 by msotnych      #+#    #+#                 */
+/*   Updated: 2026/10/29 18:37:44 by msotnych      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,20 @@
 
 int	ft_putchar(char c)
 {
-	write(1, &c, 1);
-	return (1);
+	return (write(1, &c, 1));
 }
 
 int	ft_putstr(char *s)
 {
-	int c;
+	int	c;
 
 	c = 0;
+	if (!s)
+		return (write(1, "(null)", 6));
 	while (s[c] != '\0')
 	{
 		write(1, &s[c], 1);
 		c++;
 	}
-	return (1);
+	return (c);
 }

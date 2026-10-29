@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: msotnych <msotnych@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2026/10/27 15:18:01 by msotnych      #+#    #+#                 */
-/*   Updated: 2026/10/28 18:07:44 by msotnych      ########   odam.nl         */
+/*   Created: 2026/10/28 16:34:30 by msotnych      #+#    #+#                 */
+/*   Updated: 2026/10/29 19:06:46 by msotnych      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,31 @@ int	ft_printf(const char *format, ...)
 	return (res);
 }
 
+int	manager(char letter, va_list *args)
+{
+	if (letter == '%')
+		return (ft_putchar('%'));
+	if (letter == 'c')
+		return (ft_putchar(va_arg(*args, int)));
+	if (letter == 's')
+		return (ft_putstr(va_arg(*args, char *)));
+	if (letter == 'd')
+		return (ft_putnbr(va_arg(*args, int)));
+	if (letter == 'i')
+		return (ft_putnbr(va_arg(*args, int)));
+	if (letter == 'u')
+		return (ft_putnbr_unsigned(va_arg(*args, unsigned int)));
+	if (letter == 'x')
+		return (ft_putnbr_hex(va_arg(*args, unsigned int)));
+	if (letter == 'X')
+		return (ft_putnbr_cap_hex(va_arg(*args, unsigned int)));
+	if (letter == 'p')
+		return (ft_putpointer(va_arg(*args, void *)));
+	return (0);
+}
+
 // int main(void)
 // {
-// 	printf("%c\n", 'w');
-// 	ft_printf("%c\n", 'f');
+// 	printf("%p\n", "*");
+// 	ft_printf("%p\n", "*");
 // }

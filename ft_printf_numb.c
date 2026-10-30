@@ -6,7 +6,7 @@
 /*   By: msotnych <msotnych@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2026/10/28 17:45:30 by msotnych      #+#    #+#                 */
-/*   Updated: 2026/10/29 19:08:06 by msotnych      ########   odam.nl         */
+/*   Updated: 2026/10/30 14:07:32 by msotnych      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_putnbr_unsigned(unsigned long nb)
 	c = 0;
 	if (nb > 9)
 	{
-		c += ft_putnbr(nb / 10);
+		c += ft_putnbr_unsigned(nb / 10);
 	}
 	str = nb % 10 + '0';
 	c += write(1, &str, 1);
